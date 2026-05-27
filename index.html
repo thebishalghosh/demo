@@ -514,30 +514,254 @@ footer {
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 1100px) {
-  #hero { grid-template-columns: 1fr; padding-top: 9rem; }
-  .hero-visual { display: none; }
-  .services-header { grid-template-columns: 1fr; }
-  #about { grid-template-columns: 1fr; }
-  .about-img-stack { display: none; }
-  .why-layout { grid-template-columns: 1fr; }
-  .why-intro-text { max-width: 100%; }
-  .newsletter-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-  .footer-top { grid-template-columns: 1fr 1fr; }
-  .testi-grid-bottom { max-width: 100%; }
+
+  #hero {
+    grid-template-columns: 1fr;
+    padding-top: 9rem;
+    gap: 3rem;
+  }
+
+  /* SHOW HERO IMAGE */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .hero-photo-frame {
+    width: 100%;
+    max-width: 380px;
+    height: 500px;
+  }
+
+  .services-header {
+    grid-template-columns: 1fr;
+  }
+
+  /* SHOW ABOUT IMAGE */
+  #about {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .about-img-stack {
+    display: block;
+    position: relative;
+    height: 520px;
+    width: 100%;
+  }
+
+  .about-main-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    right: auto;
+    top: auto;
+  }
+
+  .about-overlay-card {
+    left: 15px;
+    bottom: 20px;
+  }
+
+  .about-tag-card {
+    right: 15px;
+    top: 15px;
+  }
+
+  .why-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .why-intro-text {
+    max-width: 100%;
+  }
+
+  .newsletter-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testi-grid-bottom {
+    max-width: 100%;
+  }
 }
+
 @media (max-width: 768px) {
-  .nav-links { display: none; }
-  section { padding: 5rem 1.5rem; }
-  #hero { padding: 8rem 1.5rem 5rem; }
-  .services-grid { grid-template-columns: 1fr; }
-  .why-grid { grid-template-columns: 1fr; }
-  .testi-grid { grid-template-columns: 1fr; }
-  .testi-grid-bottom { grid-template-columns: 1fr; }
-  .metrics-inner { grid-template-columns: 1fr; }
-  .metric-block { border-right: none; border-bottom: 1px solid var(--glass-border); padding: 2rem 1.5rem; }
-  .metric-block:last-child { border-bottom: none; }
-  .footer-top { grid-template-columns: 1fr; }
-  .cta-contact { gap: 1.5rem; }
+
+  .nav-links {
+    display: none;
+  }
+
+  section {
+    padding: 5rem 1.5rem;
+  }
+
+  #hero {
+    padding: 8rem 1.5rem 5rem;
+    gap: 2.5rem;
+  }
+
+  .display-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .hero-body {
+    font-size: 0.95rem;
+  }
+
+  /* MOBILE HERO IMAGE */
+  .hero-photo-frame {
+    max-width: 290px;
+    height: 380px;
+    margin: 0 auto;
+  }
+
+  .hero-photo-img {
+    inset: 8px;
+  }
+
+  /* FLOATING BADGES */
+  .floating-badge {
+    transform: scale(0.82);
+    padding: 0.8rem 1rem;
+  }
+
+  .badge-clients {
+    left: -12px;
+    bottom: 10px;
+  }
+
+  .badge-forbes {
+    right: -10px;
+    top: 18px;
+  }
+
+  /* ABOUT SECTION MOBILE */
+  .about-img-stack {
+    height: 400px;
+  }
+
+  .about-overlay-card {
+    width: 180px;
+    padding: 1rem 1.2rem;
+  }
+
+  .about-overlay-num {
+    font-size: 2.5rem;
+  }
+
+  .about-tag-card {
+    padding: 0.7rem 0.9rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testi-grid-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-block {
+    border-right: none;
+    border-bottom: 1px solid var(--glass-border);
+    padding: 2rem 1.5rem;
+  }
+
+  .metric-block:last-child {
+    border-bottom: none;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-contact {
+    gap: 1.5rem;
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .newsletter-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-photo-frame {
+    max-width: 250px;
+    height: 330px;
+  }
+
+  .about-img-stack {
+    height: 340px;
+  }
+
+  .floating-badge {
+    transform: scale(0.72);
+  }
+
+  .badge-clients {
+    left: -18px;
+    bottom: 0;
+  }
+
+  .badge-forbes {
+    right: -15px;
+    top: 10px;
+  }
+
+  .display-title {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>
 </head>
